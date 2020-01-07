@@ -1,0 +1,6 @@
+for fichier in $(ls CONTEXTES-CONCAT)
+	do 
+	echo "<contexte=$fichier>" >> GROS_FICHIER_ITRAM.txt
+	cat CONTEXTES-CONCAT/$fichier| tr -d ">"|tr -d "<" >> GROS_FICHIER_ITRAM.txt; 
+	echo "</contexte>" >> GROS_FICHIER_ITRAM.txt; 
+	done
