@@ -1,0 +1,16 @@
+import nltk
+from nltk.corpus import stopwords
+
+def nettoyage(txt) :
+    liste = txt.split()
+    clean = [i.lower() for i in liste if i not in stopwords.words("french")]    
+    clean_txt = " ".join(clean)
+    return clean_txt
+
+fichier = open('GROS_FICHIER_ITRAM.txt', 'r', encoding = "utf-8")
+fichier_string = fichier.read()  
+
+new = open("gros_fich_itram_nett.txt", "w", encoding = "utf-8")
+
+ok = nettoyage(fichier_string)
+new.write(ok)
