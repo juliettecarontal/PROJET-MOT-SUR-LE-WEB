@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -f Gros_fichier_RU.txt;
+for fichier in $(ls ./CONTEXTES/1-*.txt);
+	do echo "<dump=$fichier>" >> Gros_fichier_RU.txt;
+	cat $fichier >> Gros_fichier_RU.txt | tr -d ">" |tr -d "<";
+	echo "</dump>" >> Gros_fichier_RU.txt;
+	done ;
