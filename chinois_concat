@@ -1,0 +1,7 @@
+#!/bin/bash 
+for fichier in $(ls ./CONTEXTES_POUR_ANALYSE/)
+		do
+				echo -e "<fichier=$fichier>\n" >> "./CONTEXTES/concat_texte.txt"; 
+				cat "./CONTEXTES_POUR_ANALYSE/$fichier" >> "./CONTEXTES/concat_texte.txt";
+				echo -e "\n</fichier>\n" >> "./CONTEXTES/concat_texte.txt";
+		done; 
