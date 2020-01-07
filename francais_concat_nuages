@@ -1,0 +1,4 @@
+for fichier in $(ls CONTEXTES-CONCAT)
+	do
+	cat CONTEXTES-CONCAT/$fichier| tr -d ">"|tr -d "<" >> GROS_FICHIER_NUAGES.txt; 
+	done
